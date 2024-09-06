@@ -36,3 +36,29 @@
   -webkit-box-orient: vertical;
   font-size: 0.8rem;
 }
+
+
+
+.bottom_bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bottom_bar a {
+  color: #8e8e8e;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom_bar a.active {
+  color: #f77f00; 
+}

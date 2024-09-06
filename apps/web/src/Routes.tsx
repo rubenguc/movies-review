@@ -1,12 +1,15 @@
 import { createRootRoute, createRoute, createRouter, Outlet } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from '@tanstack/router-devtools'
 import { Home } from "./pages/home";
+import { Profile } from "./pages/profile";
+import BottomBar from "./components/layout/BottomBar";
 
 const rootRoute = createRootRoute({
   component: () => (
     <>
       <Outlet />
-      <TanStackRouterDevtools />
+      <BottomBar />
+      {/* <TanStackRouterDevtools /> */}
     </>
   )
 })
@@ -26,7 +29,7 @@ const clubRoute = createRoute({
 const profileRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/profile",
-  component: Home
+  component: Profile
 })
 
 
