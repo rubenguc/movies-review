@@ -1,0 +1,38 @@
+
+
+.search {
+  width: 100%;
+  margin-top: 1rem;
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.search .ant-select-selector {
+  border: none !important;
+}
+
+.profile_picture {
+  border-radius: 100%;
+  object-fit: cover;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 0.5rem;
+}
+
+.username {
+  font-size: 0.75rem;
+  color: #555;
+  font-weight: 300;
+}
+
+.rate > .ant-rate {
+  font-size: 1rem !important;
+}
+
+.post_description {
+  overflow: hidden;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  font-size: 0.8rem;
+}
