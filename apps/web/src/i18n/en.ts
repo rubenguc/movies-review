@@ -9,4 +9,10 @@ export default {
     your_movies: "Your movies",
     your_reviews: "Your Reviews",
   },
+  movie: {
+    storyline: "Storyline",
+    cast: "Cast",
+    photos: "Photos",
+    see_all_reviews: "See all reviews",
+  },
 };

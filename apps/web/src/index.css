@@ -1,4 +1,8 @@
 
+:root {
+  --text-gray: #999
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -10,7 +10,7 @@ const BottomBar = () => {
       <Link to="/" className={location.pathname === "/" ? "active" : ""}>
         <HomeFilled size={24} />
       </Link>
-      <Link to="/club" className={location.pathname === "/club" ? "active" : ""}>
+      <Link to="#" className={location.pathname === "/club" ? "active" : ""}>
         <RobotFilled size={24} />
       </Link>
       <Link to="/profile" className={location.pathname === "/profile" ? "active" : ""}>
