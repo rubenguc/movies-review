@@ -1,6 +1,3 @@
-import { Flex, Image, Typography } from "antd"
-import styles from "../index.module.css";
-
 interface MovieInfoProps {
   poster: string;
   title: string;
@@ -16,23 +13,23 @@ export default function MovieInfo({
   title
 }: MovieInfoProps) {
   return (
-    <Flex>
-      <Image src={poster} width={180} className={styles.poster} />
-      <Flex className={styles.movie_info_container} vertical gap={2}>
-        <Typography.Text className={styles.title}>
+    <div className="flex gap-2">
+      <img src={poster} width={180} className="flex-[20%]" />
+      <div className="flex flex-col gap-2 flex-[80%]">
+        <h3 className="text-xl font-semibold">
           {title}
-        </Typography.Text>
-        <Typography.Paragraph className={styles.author}>
+        </h3>
+        <p className="text-sm text-gray-500 font-light">
           {author}
-        </Typography.Paragraph>
-        <Flex wrap="wrap" gap={4}>
+        </p>
+        <div className="flex flex-wrap gap-2">
           {categories.map((category) => (
-            <Typography.Text className={styles.categorie}>
+            <p className="bg-gray-200 text-center text-gray-500 text-xs p-1 w-fit rounded">
               {category}
-            </Typography.Text>
+            </p>
           ))}
-        </Flex>
-      </Flex>
-    </Flex>
+        </div>
+      </div>
+    </div>
   )
 }
