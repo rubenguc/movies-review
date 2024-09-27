@@ -1,6 +1,4 @@
-import { Card, Flex, Rate } from "antd";
-import cssStyles from "../index.module.css";
-import { createStyles } from "antd-style";
+import Stars from 'react-stars'
 
 interface PostProps {
   id: string;
@@ -11,13 +9,6 @@ interface PostProps {
   movie_poster: string;
 }
 
-const useStyles = createStyles(({ css }) => ({
-  rating: css`
-    &.ant-rate {
-      font-size: 1rem;
-    }
-  `,
-}));
 
 export default function Post({
   content,
@@ -27,32 +18,30 @@ export default function Post({
   username,
   movie_poster,
 }: PostProps) {
-  const { styles } = useStyles();
 
   return (
-    <Card
-      hoverable
-      style={{ width: 240 }}
-      cover={<img alt="example" src={movie_poster} />}
-    >
-      <Card.Meta
-        title={
-          <Flex>
-            <img
-              className={cssStyles.profile_picture}
-              src={profile_picture}
-              width={40}
-              height={40}
+    <div className="border rounded-lg w-full max-w-80 overflow-hidden shadow">
+      <img alt="example" src={movie_poster} className="object-cover w-full aspect-auto h-96" />
+      <div className="flex flex-col p-3">
+        <div className="flex gap-3">
+          <img
+            className="flex rounded-full object-cover w-10 h-10"
+            src={profile_picture}
+          />
+          <div className="flex flex-col">
+            <p className="text-gray-600 -mb-1">{username}</p>
+            <Stars
+              count={5}
+              size={14}
+              edit={false}
+              value={stars}
             />
-
-            <Flex vertical>
-              <p className={cssStyles.username}>{username}</p>
-              <Rate disabled value={stars} className={styles.rating} />
-            </Flex>
-          </Flex>
-        }
-        description={<p className={cssStyles.post_description}>{content}</p>}
-      />
-    </Card>
+          </div>
+        </div>
+        <p className="overflow-hidden w-full box text-sm mt-3 text-gray-700">
+          {content}
+        </p>
+      </div>
+    </div>
   );
 }

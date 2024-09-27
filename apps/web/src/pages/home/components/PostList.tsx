@@ -1,17 +1,9 @@
-import { Flex } from "antd";
 import { POSTS_MOCKS } from "../../../mocks/posts";
 import Post from "./Post";
 
 export default function PostList() {
   return (
-    <Flex
-      vertical
-      gap="middle"
-      align="center"
-      style={{
-        marginTop: "1rem"
-      }}
-    >
+    <div className="flex flex-col gap-2 items-center mt-4">
       {POSTS_MOCKS.map(({ id, stars, content, user, movie_poster }) => (
         <Post
           id={id}
@@ -22,6 +14,6 @@ export default function PostList() {
           movie_poster={movie_poster}
         />
       ))}
-    </Flex>
-  )
+    </div>
+  );
 }
