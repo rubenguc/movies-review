@@ -1,6 +1,6 @@
 {
   "globalDependencies": [".env"],
-  "globalEnv": ["FIREBASE_API_KEY", "FIREBASE_AUTH_DOMAIN", "FIREBASE_PROJETCT_ID", "FIREBASE_STORAGE_BUCKET", "FIREBASE_APP_ID"],
+  "globalEnv": ["FIREBASE_API_KEY", "FIREBASE_AUTH_DOMAIN", "FIREBASE_PROJETCT_ID", "FIREBASE_STORAGE_BUCKET", "FIREBASE_APP_ID", "FIREBASE_MESSAGE_SENDER_ID"],
   "$schema": "https://turbo.build/schema.json",
   "ui": "tui",
   "tasks": {
@@ -13,7 +13,8 @@
       "dependsOn": ["^lint"]
     },
     "dev": {
-      "cache": false
+      "cache": false,
+      "persistent": true
     }
   }
 }
