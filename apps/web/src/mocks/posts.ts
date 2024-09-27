@@ -2,7 +2,7 @@ export const POSTS_MOCKS = [
   {
     id: "66da41ad8e9a760506a5de43",
     movie_poster:
-      "https://m.media-amazon.com/images/I/71oP508eeSL._AC_UF894,1000_QL80_.jpg",
+      "https://rukminim2.flixcart.com/image/850/1000/k0h12fk0/poster/r/e/m/medium-joker-movie-poster-for-room-office-13-inch-x-19-inch-original-imafk9cfehvuwyha.jpeg?q=90&crop=false",
     user: {
       profile_picture:
         "https://i.pinimg.com/550x/a4/73/f5/a473f5a0bd0f39cb1b320042c289879c.jpg",

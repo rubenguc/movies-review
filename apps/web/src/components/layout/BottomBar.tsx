@@ -1,6 +1,6 @@
 import { Link, useLocation } from "@tanstack/react-router";
-import { HomeFilled, RobotFilled, UserOutlined } from "@ant-design/icons";
 import styles from "./index.module.css";
+import { BsHouseFill, BsRobot, BsPeopleFill } from "react-icons/bs"
 
 const BottomBar = () => {
   const location = useLocation();
@@ -8,13 +8,13 @@ const BottomBar = () => {
   return (
     <div className={styles.bottom_bar}>
       <Link to="/" className={location.pathname === "/" ? "active" : ""}>
-        <HomeFilled size={24} />
+        <BsHouseFill size={24} />
       </Link>
       <Link to="#" className={location.pathname === "/club" ? "active" : ""}>
-        <RobotFilled size={24} />
+        <BsRobot size={24} />
       </Link>
       <Link to="/profile" className={location.pathname === "/profile" ? "active" : ""}>
-        <UserOutlined size={24} />
+        <BsPeopleFill size={24} />
       </Link>
     </div>
   );
